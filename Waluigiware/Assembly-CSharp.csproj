@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Minigames\Subway\buttonController.cs" />
      <Compile Include="Assets\Minigames\test\HitCheck.cs" />
      <Compile Include="Assets\Minigames\test\ObjDeletion.cs" />
      <Compile Include="Assets\Minigames\test\testSpawner.cs" />
