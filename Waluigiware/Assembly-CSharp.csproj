@@ -46,10 +46,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BG_Systems\GameManager.cs" />
      <Compile Include="Assets\Minigames\Fly\FlyScript.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\RulerDropper.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\catchZone.cs" />
+     <Compile Include="Assets\Minigames\RulerDrop\rulerController.cs" />
+     <Compile Include="Assets\Minigames\RulerDrop\winCon.cs" />
      <Compile Include="Assets\Minigames\Subway\buttonController.cs" />
+     <Compile Include="Assets\Minigames\pogoStick\holeScript.cs" />
+     <Compile Include="Assets\Minigames\pogoStick\pogoMovement.cs" />
      <Compile Include="Assets\Minigames\test\HitCheck.cs" />
      <Compile Include="Assets\Minigames\test\ObjDeletion.cs" />
      <Compile Include="Assets\Minigames\test\testSpawner.cs" />

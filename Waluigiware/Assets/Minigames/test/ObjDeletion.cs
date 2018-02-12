@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ObjDeletion : MonoBehaviour {
 
+	private GameManager gM;
+	private bool won = false;
+	private float winTime;
+	private float endWin;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,7 +16,13 @@ public class ObjDeletion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		endWin = Time.time - winTime;
+		if (won) {
+			if (endWin >= 2f) {
+				LevelChange ();
+				won = false;
+			}
+		}
 	}
 
 	void OnTriggerEnter2D (Collider2D other){
@@ -20,7 +31,15 @@ public class ObjDeletion : MonoBehaviour {
 		}
 		if (other.tag == "Player") {
 			Destroy (other.gameObject);
-			//Call Level End (w/ Ball player lose)
+			winTime = Time.time;
+			won = true;
 		}
+	}
+
+	void LevelChange (){
+		gM = FindObjectOfType<GameManager> ();
+		gM.keyboardScore++;
+		gM.LevelChange ();
+		Debug.Log ("LevelChange");
 	}
 }

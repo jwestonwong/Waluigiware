@@ -11,6 +11,11 @@ public class buttonController : MonoBehaviour {
 
 	public Text prompt;
 
+	private GameManager gM;
+	private bool won = false;
+	private float winTime;
+	private float endWin = 1f;
+
 	// Use this for initialization
 	void Start () {
 		buttonOrderFiller = 0;
@@ -21,11 +26,21 @@ public class buttonController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (arrayPos >= 10) {
+		if (arrayPos == 10) {
 			Debug.Log ("Subway wins!");
 			prompt.text = "Subway Wins!";
-		} else {
+			winTime = Time.time;
+			won = true;
+			arrayPos++;
+		} else if (arrayPos < 10) {
 			prompt.text = (buttonOrder[arrayPos]).ToString();
+		}
+		endWin = Time.time - winTime;
+		if (won) {
+			if (endWin >= 2f) {
+				LevelChange ();
+				won = false;
+			}
 		}
 	}
 
@@ -66,5 +81,12 @@ public class buttonController : MonoBehaviour {
 		if ((buttonOrder [arrayPos]) == 5) {
 			arrayPos++;
 		}
+	}
+
+	void LevelChange (){
+		gM = FindObjectOfType<GameManager> ();
+		gM.keyboardScore++;
+		gM.LevelChange ();
+		Debug.Log ("LevelChange");
 	}
 }

@@ -17,8 +17,13 @@ public class FlyScript : MonoBehaviour {
 	public Collider2D coll;
 	public Rigidbody2D rb;
 
+	private GameManager gm;
+
 	public float speed = 10f;
 
+	private bool won = false;
+	private float winTime;
+	private float endWin = 2f;
 
 	// Use this for initialization
 	void Start () {
@@ -38,6 +43,7 @@ public class FlyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		endWin = Time.time - winTime;
 		Movement ();
 		if (Input.GetMouseButtonDown (0)) {
 			coll.isTrigger = true;
@@ -49,6 +55,14 @@ public class FlyScript : MonoBehaviour {
 			coll.isTrigger = false;
 			rb.simulated = false;
 		}
+
+		if (won) {
+			if (endWin >= 2f) {
+				LevelChange ();
+				won = false;
+			}
+		}
+
 	}
 
 	void Movement(){
@@ -73,6 +87,15 @@ public class FlyScript : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other){
 		Debug.Log ("Bug Caught");
-		Destroy (gameObject);
+		Destroy (gameObject.GetComponent<SpriteRenderer>());
+		winTime = Time.time;
+		won = true;
+	}
+
+	void LevelChange (){
+		gm = FindObjectOfType<GameManager> ();
+		gm.mouseScore++;
+		gm.LevelChange ();
+		Debug.Log ("LevelChange");
 	}
 }
