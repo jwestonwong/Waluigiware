@@ -53,11 +53,13 @@
      <Compile Include="Assets\Minigames\RulerDrop\rulerController.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\winCon.cs" />
      <Compile Include="Assets\Minigames\Subway\buttonController.cs" />
+     <Compile Include="Assets\Minigames\Subway\randomLetter.cs" />
      <Compile Include="Assets\Minigames\pogoStick\holeScript.cs" />
      <Compile Include="Assets\Minigames\pogoStick\pogoMovement.cs" />
      <Compile Include="Assets\Minigames\test\HitCheck.cs" />
      <Compile Include="Assets\Minigames\test\ObjDeletion.cs" />
      <Compile Include="Assets\Minigames\test\testSpawner.cs" />
+     <Compile Include="Assets\Scripts\MouseTimer.cs" />
      <Compile Include="Assets\Scripts\MouseTracking.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

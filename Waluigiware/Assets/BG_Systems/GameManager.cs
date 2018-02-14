@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
 	public int mouseScore;
 	public int keyboardScore;
 
-	private int totalLevelsPlayed;
+	private int totalLevelsPlayed = 0;
 
 	void Awake () {
 		if (instance != null) {
@@ -37,8 +37,9 @@ public class GameManager : MonoBehaviour {
 	public void LevelChange(){
 		gameIndex = Random.Range (1, 6);
 		if (gameIndex != previousLevel) {
-				previousLevel = gameIndex;
-				SceneManager.LoadSceneAsync (gameIndex);
+			previousLevel = gameIndex;
+			SceneManager.LoadSceneAsync (gameIndex);
+			totalLevelsPlayed++;
 		} else {
 			LevelChange ();
 		}
