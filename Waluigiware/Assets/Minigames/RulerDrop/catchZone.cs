@@ -57,7 +57,7 @@ public class catchZone : MonoBehaviour {
 
 	void LevelChange (){
 		gM = FindObjectOfType<GameManager> ();
-		gM.keyboardScore++;
+		gM.mouseScore++;
 		gM.LevelChange ();
 		Debug.Log ("LevelChange");
 	}

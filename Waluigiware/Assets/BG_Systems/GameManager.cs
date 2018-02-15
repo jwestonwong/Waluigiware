@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 	
@@ -13,6 +14,14 @@ public class GameManager : MonoBehaviour {
 	public int keyboardScore;
 
 	private int totalLevelsPlayed = 0;
+
+	public Text mouse;
+	public Text keyboard;
+
+	public bool mouseWon = false;
+	public bool keyboardWon = false;
+
+	bool gameEnded = false;
 
 	void Awake () {
 		if (instance != null) {
@@ -32,6 +41,22 @@ public class GameManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.P)) {
 			LevelChange ();
 		}
+		mouse.text = ("Mouse: " + mouseScore);
+		keyboard.text = ("Keyboard: " + keyboardScore);
+
+		if (totalLevelsPlayed >= 15) {
+			if (mouseScore > keyboardScore) {
+				mouseWon = true;
+			}
+			if (mouseScore < keyboardScore) {
+				keyboardWon = true;
+			}
+			if (gameEnded == false) {
+				GameEnd ();
+				gameEnded = true;
+			}
+		}
+
 	}
 
 	public void LevelChange(){
@@ -43,5 +68,9 @@ public class GameManager : MonoBehaviour {
 		} else {
 			LevelChange ();
 		}
+	}
+
+	public void GameEnd(){
+		SceneManager.LoadSceneAsync ("End");
 	}
 }

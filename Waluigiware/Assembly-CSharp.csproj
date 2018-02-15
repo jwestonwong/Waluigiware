@@ -59,6 +59,7 @@
      <Compile Include="Assets\Minigames\test\HitCheck.cs" />
      <Compile Include="Assets\Minigames\test\ObjDeletion.cs" />
      <Compile Include="Assets\Minigames\test\testSpawner.cs" />
+     <Compile Include="Assets\Scripts\EndDisplay.cs" />
      <Compile Include="Assets\Scripts\MouseTimer.cs" />
      <Compile Include="Assets\Scripts\MouseTracking.cs" />
  <Reference Include="UnityEngine.UI">

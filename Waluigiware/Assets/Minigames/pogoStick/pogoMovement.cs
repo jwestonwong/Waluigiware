@@ -59,6 +59,7 @@ public class pogoMovement : MonoBehaviour {
 		if (other.tag == "Mouse") {
 			Debug.Log ("Mouse Wins");
 			Destroy (this.GetComponent<Collider2D> ());
+			Destroy (this.GetComponent<MouseTimer> ());
 			winTime = Time.time;
 			won = true;
 		}

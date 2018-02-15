@@ -29,7 +29,7 @@ public class ObjDeletion : MonoBehaviour {
 		if (other.tag == "Obstacle") {
 			Destroy (other.gameObject);
 		}
-		if (other.tag == "Player") {
+		if (other.tag == "Mouse") {
 			Destroy (other.gameObject);
 			winTime = Time.time;
 			won = true;

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: dc5f8e019ade944f8b50c7b86cbdb425
+timeCreated: 1518703918
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: ModernaUnicase Condensed
+  fontNames:
+  - ModernaUnicase Condensed
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

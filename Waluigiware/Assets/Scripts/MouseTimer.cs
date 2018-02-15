@@ -26,13 +26,23 @@ public class MouseTimer : MonoBehaviour {
 				gm.LevelChange ();
 				beat = false;
 			} else if (unwon){
-				Debug.Log ("Mouse Won");
-				gm = FindObjectOfType<GameManager> ();
-				gm.mouseScore++;
-				startTimer = Time.time;
-				endTimer = 2f;
-				beat = true;
-				unwon = false;
+				if (this.tag == "Mouse") {
+					Debug.Log ("Mouse Won");
+					gm = FindObjectOfType<GameManager> ();
+					gm.mouseScore++;
+					startTimer = Time.time;
+					endTimer = 2f;
+					beat = true;
+					unwon = false;
+				} else if (this.tag == "Keyboard") {
+					Debug.Log ("Keyboard Won");
+					gm = FindObjectOfType<GameManager> ();
+					gm.keyboardScore++;
+					startTimer = Time.time;
+					endTimer = 2f;
+					beat = true;
+					unwon = false;
+				}
 			}
 		}
 	}
