@@ -88,6 +88,7 @@ public class FlyScript : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		Debug.Log ("Bug Caught");
 		Destroy (gameObject.GetComponent<SpriteRenderer>());
+		Destroy (gameObject.GetComponent<MouseTimer>());
 		winTime = Time.time;
 		won = true;
 	}

@@ -9,6 +9,8 @@ public class ObjDeletion : MonoBehaviour {
 	private float winTime;
 	private float endWin;
 
+	private testSpawner ts;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -37,6 +39,8 @@ public class ObjDeletion : MonoBehaviour {
 	}
 
 	void LevelChange (){
+		ts = FindObjectOfType<testSpawner> ();
+		ts.Refresh ();
 		gM = FindObjectOfType<GameManager> ();
 		gM.keyboardScore++;
 		gM.LevelChange ();

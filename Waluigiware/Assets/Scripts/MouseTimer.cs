@@ -12,6 +12,7 @@ public class MouseTimer : MonoBehaviour {
 	bool unwon = true;
 
 	private GameManager gm;
+	private testSpawner tS;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +35,10 @@ public class MouseTimer : MonoBehaviour {
 					endTimer = 2f;
 					beat = true;
 					unwon = false;
+					if (this.name == "Ball") {
+						tS = FindObjectOfType<testSpawner> ();
+						tS.Refresh ();
+					}
 				} else if (this.tag == "Keyboard") {
 					Debug.Log ("Keyboard Won");
 					gm = FindObjectOfType<GameManager> ();

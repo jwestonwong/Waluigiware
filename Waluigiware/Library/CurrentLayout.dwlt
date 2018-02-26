@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 751
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
-  controlID: 62
+  controlID: 72
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 63
+  controlID: 73
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 64
+  controlID: 74
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 65
+  controlID: 50
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,14 +226,14 @@ MonoBehaviour:
     height: 430
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 13}
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -332,7 +332,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1
@@ -390,28 +390,28 @@ MonoBehaviour:
     height: 409
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 42260000
-    m_LastClickedID: 9794
-    m_ExpandedIDs: 48f9ffffe4fbffff0000000000260000
+    m_SelectedIDs: 42010100
+    m_LastClickedID: 65858
+    m_ExpandedIDs: 8415eeff9419eeff1e8feeff309eeeff38f3eeffd6f3eeff7a0befff121defffde38efff7c3fefffca47efff3252efff765aefffbc78efff8847f0ff2688f0ff54a4f0ff3cadf0ff3829f1ff6c75f1ff7480f1ffce87f1ffbed9f1ff2cddf1fffcdff1ff1cf5f1ff84fbf1ff4cfcf1ff18fdf1ff22fdf1ff2efdf1ff38fdf1ff40fdf1ff4afdf1ff4efdf1ff5c08f2ffcc09f2ff400df2ff080ef2ffd40ef2ffde0ef2ffea0ef2fff40ef2fff80ef2ff000ff2ff040ff2ffd026f2ffe869f2ffb87df2ffae8df2ff708ef2ff408ff2ff4e8ff2ff5e8ff2ff6c8ff2ff788ff2ff868ff2ff8e8ff2ff3c9df2ff8c9ff2ff9aa3f2ffaaa6f2ff46aaf2ff28adf2ffa2aff2ff60c1f2ff38cdf2ff38d4f2ff18ddf2ffdcddf2ffacdef2ffbadef2ffcadef2ffd8def2ffe4def2fff2def2fffadef2ff18e6f2ff0a27f3ffd227f3ffe62df3ff7876f3ff62b8f3ff48b9f3ffb801f4ffd040f4ffd441f4ffdc8af4ff088cf4ffd228f5ff5e29f5ffe058f5ff3260f5ffd860f5ff3a7ff5ff5c91f5ffe8adf5ff1eb5f5ff54e5f5fffcedf5ff44faf5ffa40ff6ffa61af6ff4227f6ffee2ef6ff7e3bf6ffba46f6ffaaeaf6ff20ecf6ff0c9cf7ffaaa9f7ff3abdf7ffa6c0f7ff7cc7f7ff8075f8ff9075f8ffd6a3f8ff76ccf8ffe6fdf8ff4c12f9ffe020f9ff52a1f9ff1066fbff70bffcff90c8fcff84ccfcff62d0fcff0cd4fcff8e67fdff10d5fdff58e5fdff4eefffffe4fbfffff4ffffff00000000d2310000b6850000068c000052ab000080ab0000feae000048b100007cb100003cba00006cba0000fee50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: gameManager
+      m_OriginalName: gameManager
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 45436
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
   m_ExpandedScenes:
-  - subway
+  - Mash
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -442,14 +442,14 @@ MonoBehaviour:
     width: 698
     height: 409
   m_SceneLighting: 1
-  lastFramingTime: 1844.9259340167046
+  lastFramingTime: 1147043.703089118
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.81672305, y: 0.54822195, z: 0}
+    m_Target: {x: 0, y: 0, z: -10}
     speed: 2
-    m_Value: {x: -0.81672305, y: 0.54822195, z: 0}
+    m_Value: {x: 0, y: 0, z: -10}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -476,9 +476,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 19.285873
+    m_Target: 23.36905
     speed: 2
-    m_Value: 19.285873
+    m_Value: 23.36905
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -540,7 +540,7 @@ MonoBehaviour:
     x: 236
     y: 94
     width: 698
-    height: 410
+    height: 409
   m_ViewPositions:
     m_KeySerializationHelper: []
     m_ValueSerializationHelper: []
@@ -599,18 +599,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Minigames/Subway
+    - Assets/Minigames/Mash
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Minigames/Subway
+  - Assets/Minigames/Mash
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/Jason/repos/Waluigiware/Waluigiware
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: da240000
-    m_LastClickedID: 9434
+    scrollPos: {x: 0, y: 43}
+    m_SelectedIDs: 38000100
+    m_LastClickedID: 65592
     m_ExpandedIDs: 00000000a22400000e25000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -667,23 +667,23 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 7c2400006e24000010530000162400002c2400001224000018240000064c00009c290000262400003c240000c82f0000bcacffff282400003e240000ca38000048250000be2500006a250000ea240000b42500001c250000f0250000302600007e250000d4370000262d0000082d0000182d0000042d00000625000046a8fdff96250000b226000080250000000000008847000088e1f3ff8678f3ffb0eaecff9e2500004c250000ec25000052260000e8250000
+    m_ExpandedInstanceIDs: 7c2400006e24000010530000162400002c2400001224000018240000064c00009c290000262400003c240000c82f0000bcacffff282400003e240000ca38000048250000be2500006a250000ea240000b42500001c250000f0250000302600007e250000d4370000262d0000082d0000182d0000042d00000625000046a8fdff96250000b226000080250000000000008847000088e1f3ff8678f3ffb0eaecff9e2500004c250000ec25000052260000e825000016a3fdffc8b10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: MashOff
+      m_OriginalName: MashOff
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 65646
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -692,7 +692,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 16
   m_DirectoriesAreaWidth: 115
 --- !u!114 &19
 MonoBehaviour:

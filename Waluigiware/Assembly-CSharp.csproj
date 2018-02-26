@@ -47,11 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\BG_Systems\GameManager.cs" />
+     <Compile Include="Assets\Minigames\Cups\CupHide.cs" />
+     <Compile Include="Assets\Minigames\Cups\CupScript.cs" />
      <Compile Include="Assets\Minigames\Fly\FlyScript.cs" />
+     <Compile Include="Assets\Minigames\Mash\MashOff.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\RulerDropper.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\catchZone.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\rulerController.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\winCon.cs" />
+     <Compile Include="Assets\Minigames\Shooty\ShootScript.cs" />
      <Compile Include="Assets\Minigames\Subway\buttonController.cs" />
      <Compile Include="Assets\Minigames\Subway\randomLetter.cs" />
      <Compile Include="Assets\Minigames\pogoStick\holeScript.cs" />

@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void LevelChange(){
-		gameIndex = Random.Range (1, 6);
+		gameIndex = Random.Range (1, 9);
 		if (gameIndex != previousLevel) {
 			previousLevel = gameIndex;
 			SceneManager.LoadSceneAsync (gameIndex);
