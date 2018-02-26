@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Minigames/Mash/Mash.unity
+- path: Assets/Minigames/RainGame/Rain.unity
   isLoaded: 1
   isActive: 1

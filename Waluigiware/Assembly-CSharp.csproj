@@ -51,6 +51,11 @@
      <Compile Include="Assets\Minigames\Cups\CupScript.cs" />
      <Compile Include="Assets\Minigames\Fly\FlyScript.cs" />
      <Compile Include="Assets\Minigames\Mash\MashOff.cs" />
+     <Compile Include="Assets\Minigames\RainGame\cloudScript.cs" />
+     <Compile Include="Assets\Minigames\RainGame\kittenMove.cs" />
+     <Compile Include="Assets\Minigames\RainGame\rainFloor.cs" />
+     <Compile Include="Assets\Minigames\RainGame\umbrellaMovement.cs" />
+     <Compile Include="Assets\Minigames\RulerDrop\Fake.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\RulerDropper.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\catchZone.cs" />
      <Compile Include="Assets\Minigames\RulerDrop\rulerController.cs" />
@@ -58,6 +63,9 @@
      <Compile Include="Assets\Minigames\Shooty\ShootScript.cs" />
      <Compile Include="Assets\Minigames\Subway\buttonController.cs" />
      <Compile Include="Assets\Minigames\Subway\randomLetter.cs" />
+     <Compile Include="Assets\Minigames\TomatoDodge\TomatoScript.cs" />
+     <Compile Include="Assets\Minigames\TomatoDodge\TomatoToss.cs" />
+     <Compile Include="Assets\Minigames\TomatoDodge\Unicycle.cs" />
      <Compile Include="Assets\Minigames\pogoStick\holeScript.cs" />
      <Compile Include="Assets\Minigames\pogoStick\pogoMovement.cs" />
      <Compile Include="Assets\Minigames\test\HitCheck.cs" />
