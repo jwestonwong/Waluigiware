@@ -17,9 +17,17 @@ public class CupScript : MonoBehaviour {
 
 	private bool mW = false;
 
+	public AudioClip win;
+	public AudioClip lose;
+	public AudioSource auPlayer;
+
+	private Camera cam;
+
 	// Use this for initialization
 	void Start () {
 		cH = FindObjectOfType<CupHide> ();
+		auPlayer = GetComponent<AudioSource> ();
+		cam = FindObjectOfType<Camera> ();
 	}
 	
 	// Update is called once per frame
@@ -43,12 +51,18 @@ public class CupScript : MonoBehaviour {
 						gameOver = true;
 						won = true;
 						mW = true;
+						auPlayer.clip = win;
+						cam.backgroundColor = new Color32 (239, 138, 98, 255);
+						auPlayer.Play ();
 						winTime = Time.time;
 					} else {
 						Debug.Log ("Incorrect");
 						gameOver = true;
 						won = true;
 						mW = false;
+						cam.backgroundColor = new Color32 (103, 169, 207, 255);
+						auPlayer.clip = lose;
+						auPlayer.Play ();
 						winTime = Time.time;
 					}
 				}

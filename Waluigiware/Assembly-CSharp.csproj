@@ -49,6 +49,10 @@
      <Compile Include="Assets\BG_Systems\GameManager.cs" />
      <Compile Include="Assets\Minigames\Cups\CupHide.cs" />
      <Compile Include="Assets\Minigames\Cups\CupScript.cs" />
+     <Compile Include="Assets\Minigames\Fall\ItemDropper.cs" />
+     <Compile Include="Assets\Minigames\Fall\keyBowlController.cs" />
+     <Compile Include="Assets\Minigames\Fall\levelTimer.cs" />
+     <Compile Include="Assets\Minigames\Fall\mouseBowlController.cs" />
      <Compile Include="Assets\Minigames\Fly\FlyScript.cs" />
      <Compile Include="Assets\Minigames\Mash\MashOff.cs" />
      <Compile Include="Assets\Minigames\RainGame\cloudScript.cs" />

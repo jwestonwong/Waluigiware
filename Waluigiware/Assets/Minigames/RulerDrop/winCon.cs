@@ -9,9 +9,13 @@ public class winCon : MonoBehaviour {
 	private float winTime;
 	private float endWin;
 
+	private AudioSource aS;
+	private Camera cam;
+
 	// Use this for initialization
 	void Start () {
-		
+		aS = GetComponent<AudioSource> ();
+		cam = FindObjectOfType<Camera> ();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +32,8 @@ public class winCon : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.tag == "Keyboard") {
 			Debug.Log ("Ruler Won");
+			aS.Play ();
+			cam.backgroundColor = new Color32 (103, 169, 207, 255);
 			winTime = Time.time;
 			won = true;
 		}

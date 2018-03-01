@@ -8,7 +8,6 @@ public class umbrellaMovement : MonoBehaviour {
 	float xmin;
 	float xmax;
 
-	float startTime;
 	float elapsedTime;
 
 	public float speed = 10f;
@@ -26,7 +25,6 @@ public class umbrellaMovement : MonoBehaviour {
 		Vector3 topRight = Camera.main.ViewportToWorldPoint (new Vector3(1, 1, distance));
 		xmin = bottomLeft.x + buffer;
 		xmax = topRight.x - buffer;
-		startTime = Time.time;
 
 	}
 

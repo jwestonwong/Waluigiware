@@ -8,7 +8,6 @@ public class Unicycle : MonoBehaviour {
 	float xmin;
 	float xmax;
 
-	float startTime;
 	float elapsedTime;
 
 	public float speed = 10f;
@@ -16,23 +15,38 @@ public class Unicycle : MonoBehaviour {
 	private SpriteRenderer spriteRenderer;
 	private TomatoScript ts;
 
+	private GameManager gM;
+	private bool won = false;
+	private float winTime;
+	private float endWin;
+	private bool mouseWon = false;
+
+	private Camera cam;
+	private AudioSource aS;
+
 	// Use this for initialization
 	void Start () {
-
+		aS = GetComponent<AudioSource> ();
+		cam = FindObjectOfType <Camera> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
-
 		float distance = transform.position.z - Camera.main.transform.position.z;
 		Vector3 bottomLeft = Camera.main.ViewportToWorldPoint (new Vector3(0, 0, distance));
 		Vector3 topRight = Camera.main.ViewportToWorldPoint (new Vector3(1, 1, distance));
 		xmin = bottomLeft.x + buffer;
 		xmax = topRight.x - buffer;
-		startTime = Time.time;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		Movement ();
+		endWin = Time.time - winTime;
+		if (won) {
+			if (endWin >= 2f) {
+				LevelChange ();
+				won = false;
+			}
+		}
 	}
 
 	void Movement(){
@@ -53,7 +67,25 @@ public class Unicycle : MonoBehaviour {
 		ts = other.gameObject.GetComponent<TomatoScript> ();
 		if (ts.tomatoTrigger == false) {
 			Debug.Log ("Hit");
-			Destroy (gameObject);
+			cam.backgroundColor = new Color32 (239, 138, 98, 255);
+			if (aS != null) {
+				aS.Play ();
+			}
+			winTime = Time.time;
+			won = true;
+			mouseWon = true;
+			Destroy (gameObject.GetComponent<SpriteRenderer>());
+			Destroy (gameObject.GetComponent<MouseTimer> ());
+			Destroy (gameObject.GetComponent<Collider2D> ());
 		}
+	}
+
+	void LevelChange(){
+		gM = FindObjectOfType<GameManager> ();
+		if (mouseWon) {
+			gM.mouseScore++;
+		}
+		gM.LevelChange ();
+		Debug.Log ("LevelChange");
 	}
 }

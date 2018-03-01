@@ -25,10 +25,15 @@ public class FlyScript : MonoBehaviour {
 	private float winTime;
 	private float endWin = 2f;
 
+	private AudioSource audio;
+	private Camera cam;
+
 	// Use this for initialization
 	void Start () {
 		coll = gameObject.GetComponent<Collider2D> ();
 		rb = gameObject.GetComponent<Rigidbody2D> ();
+		audio = GetComponent<AudioSource> ();
+		cam = FindObjectOfType<Camera> ();
 
 		float distance = transform.position.z - Camera.main.transform.position.z;
 		Vector3 bottomLeft = Camera.main.ViewportToWorldPoint (new Vector3(0, 0, distance));
@@ -87,6 +92,8 @@ public class FlyScript : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other){
 		Debug.Log ("Bug Caught");
+		audio.Play ();
+		cam.backgroundColor = new Color32 (239, 138, 98, 255);
 		Destroy (gameObject.GetComponent<SpriteRenderer>());
 		Destroy (gameObject.GetComponent<MouseTimer>());
 		winTime = Time.time;

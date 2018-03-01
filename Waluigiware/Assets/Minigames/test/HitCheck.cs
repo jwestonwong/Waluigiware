@@ -5,10 +5,12 @@ using UnityEngine;
 public class HitCheck : MonoBehaviour {
 
 	private MouseTracking mouseTrack;
+	private AudioSource aS;
 
 	// Use this for initialization
 	void Start () {
-		mouseTrack = gameObject.GetComponent<MouseTracking> ();
+		mouseTrack = GetComponent<MouseTracking> ();
+		aS = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -19,6 +21,7 @@ public class HitCheck : MonoBehaviour {
 		if (other.tag == "Obstacle") {
 			if (mouseTrack != null) {
 				Destroy (mouseTrack);
+				aS.Play ();
 				mouseTrack = gameObject.GetComponent<MouseTracking> ();
 			}
 		}

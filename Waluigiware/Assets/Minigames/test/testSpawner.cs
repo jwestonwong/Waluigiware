@@ -20,43 +20,43 @@ public class testSpawner : MonoBehaviour {
 		if (blockTotal > 0) {
 
 			if (blockNumber == 1) {
-				if (Input.GetKeyDown (KeyCode.Alpha1)) {
+				if (Input.GetKeyDown (KeyCode.Q)) {
 					Instantiate (block, transform.position, Quaternion.identity);
 					blockTotal--;
 				}
 			}
 			if (blockNumber == 2) {
-				if (Input.GetKeyDown (KeyCode.Alpha2)) {
+				if (Input.GetKeyDown (KeyCode.W)) {
 					Instantiate (block, transform.position, Quaternion.identity);
 					blockTotal--;
 				}
 			}
 			if (blockNumber == 3) {
-				if (Input.GetKeyDown (KeyCode.Alpha3)) {
+				if (Input.GetKeyDown (KeyCode.E)) {
 					Instantiate (block, transform.position, Quaternion.identity);
 					blockTotal--;
 				}
 			}
 			if (blockNumber == 4) {
-				if (Input.GetKeyDown (KeyCode.Alpha4)) {
+				if (Input.GetKeyDown (KeyCode.A)) {
 					Instantiate (block, transform.position, Quaternion.identity);
 					blockTotal--;
 				}
 			}
 			if (blockNumber == 5) {
-				if (Input.GetKeyDown (KeyCode.Alpha5)) {
+				if (Input.GetKeyDown (KeyCode.S)) {
 					Instantiate (block, transform.position, Quaternion.identity);
 					blockTotal--;
 				}
 			}
 			if (blockNumber == 6) {
-				if (Input.GetKeyDown (KeyCode.Alpha6)) {
+				if (Input.GetKeyDown (KeyCode.D)) {
 					Instantiate (block, transform.position, Quaternion.identity);
 					blockTotal--;
 				}
 			}
 			if (blockNumber == 7) {
-				if (Input.GetKeyDown (KeyCode.Alpha7)) {
+				if (Input.GetKeyDown (KeyCode.Space)) {
 					Instantiate (block, transform.position, Quaternion.identity);
 					blockTotal--;
 				}

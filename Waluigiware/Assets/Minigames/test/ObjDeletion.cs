@@ -11,9 +11,11 @@ public class ObjDeletion : MonoBehaviour {
 
 	private testSpawner ts;
 
+	private Camera cam;
+
 	// Use this for initialization
 	void Start () {
-		
+		cam = FindObjectOfType<Camera> ();
 	}
 	
 	// Update is called once per frame
@@ -33,6 +35,7 @@ public class ObjDeletion : MonoBehaviour {
 		}
 		if (other.tag == "Mouse") {
 			Destroy (other.gameObject);
+			cam.backgroundColor = new Color32 (103, 169, 207, 255);
 			winTime = Time.time;
 			won = true;
 		}
@@ -40,9 +43,9 @@ public class ObjDeletion : MonoBehaviour {
 
 	void LevelChange (){
 		ts = FindObjectOfType<testSpawner> ();
-		ts.Refresh ();
 		gM = FindObjectOfType<GameManager> ();
 		gM.keyboardScore++;
+		ts.Refresh ();
 		gM.LevelChange ();
 		Debug.Log ("LevelChange");
 	}

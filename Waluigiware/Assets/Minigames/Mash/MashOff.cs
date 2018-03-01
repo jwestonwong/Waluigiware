@@ -19,10 +19,12 @@ public class MashOff : MonoBehaviour {
 	private bool won = false;
 	private float winTime;
 	private float endWin;
+	private AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
 		cam = FindObjectOfType<Camera> ();
+		audio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -53,11 +55,13 @@ public class MashOff : MonoBehaviour {
 				victory = true;
 				mV = true;
 				won = true;
+				audio.Play ();
 				winTime = Time.time;
 				cam.backgroundColor = new Color32 (239, 138, 98, 255);
 			} else if (mash <= -30) {
 				victory = true;
 				won = true;
+				audio.Play ();
 				winTime = Time.time;
 				cam.backgroundColor = new Color32 (103, 169, 207, 255);
 			}

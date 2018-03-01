@@ -22,7 +22,7 @@ public class cloudScript : MonoBehaviour {
 		startTimer = Time.time;
 
 		float distance = transform.position.z - Camera.main.transform.position.z;
-		Vector3 bottomLeft = Camera.main.ViewportToWorldPoint (new Vector3(0, 0.6f, distance));
+		Vector3 bottomLeft = Camera.main.ViewportToWorldPoint (new Vector3(0, 0.7f, distance));
 		Vector3 topRight = Camera.main.ViewportToWorldPoint (new Vector3(1, 1, distance));
 		xmin = bottomLeft.x + buffer;
 		xmax = topRight.x - buffer;

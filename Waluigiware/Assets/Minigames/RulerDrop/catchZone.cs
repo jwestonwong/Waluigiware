@@ -18,8 +18,13 @@ public class catchZone : MonoBehaviour {
 	private float winTime;
 	private float endWin = 1f;
 
+	public AudioSource auPlayer;
+	private Camera cam;
+
 	// Use this for initialization
 	void Start () {
+		auPlayer = GetComponent<AudioSource> ();
+		cam = FindObjectOfType<Camera> ();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +34,8 @@ public class catchZone : MonoBehaviour {
 			if (inZone) {
 				caught = true;
 				Debug.Log ("Ruler Catch!");
+				auPlayer.Play ();
+				cam.backgroundColor = new Color32 (239, 138, 98, 255);
 				winTime = Time.time;
 				won = true;
 			}

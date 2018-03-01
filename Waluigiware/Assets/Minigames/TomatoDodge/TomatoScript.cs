@@ -17,6 +17,7 @@ public class TomatoScript : MonoBehaviour {
 
 	public bool tomatoTrigger = true;
 
+
 	// Use this for initialization
 	void Start () {
 		startTime = Time.time;

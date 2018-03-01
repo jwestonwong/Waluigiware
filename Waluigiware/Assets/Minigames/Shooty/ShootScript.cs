@@ -22,10 +22,15 @@ public class ShootScript : MonoBehaviour {
 	private float winTime;
 	private float endWin;
 
+	private AudioSource aS;
+	private Camera cam;
+
 	// Use this for initialization
 	void Start () {
 		startTimer = Time.time;
 		randomTimer = Random.Range (2f, 4f);
+		cam = FindObjectOfType<Camera> ();
+		aS = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -36,7 +41,7 @@ public class ShootScript : MonoBehaviour {
 		if (started != true) {
 			display.text = "Wait";
 		} else {
-			display.text = "Fire!";
+			display.text = "Click/Space!";
 		}
 
 		if (randomTimer < Timer) {
@@ -51,6 +56,8 @@ public class ShootScript : MonoBehaviour {
 					winTime = Time.time;
 					won = true;
 					Debug.Log ("Keyboard Won");
+					aS.Play ();
+					cam.backgroundColor = new Color32 (103, 169, 207, 255);
 				}
 			}
 			if (Input.GetMouseButtonDown (0)) {
@@ -60,6 +67,8 @@ public class ShootScript : MonoBehaviour {
 					mouseWon = true;
 					noWinner = false;
 					Debug.Log ("Mouse Won");
+					aS.Play ();
+					cam.backgroundColor = new Color32 (239, 138, 98, 255);
 				}
 			}
 		}
